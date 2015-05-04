@@ -1,0 +1,8 @@
+{
+    "name": "js-layzr",
+    "version": "0.0.1",
+    "description": "a demo for layzr",
+    "dependencies": {
+        "layzr.js": "^1.1.4"
+    }
+}

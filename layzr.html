@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Layzr Demo</title>
+        <script src="node_modules/layzr.js/dist/layzr.js"></script>
+        <style>
+            .row {
+                margin: 50px 0;
+                height: 500px;
+            }
+            .border {
+                padding: 10px;
+                border-style: solid;
+                border-width: 3px;
+                border-color: blue;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="wrapper">
+            <div class="row">
+                <img src="./bg.png" data-layzr="http://blog.fens.me/wp-content/uploads/2015/02/marked.png">
+            </div>
+            <div class="row">
+                <img src="./bg.png" data-layzr="http://blog.fens.me/wp-content/uploads/2015/03/buffer.png">
+            </div>
+            <div class="row">
+                <img src="./bg.png" data-layzr="http://blog.fens.me/wp-content/uploads/2015/02/express4.png">
+            </div>
+            <div class="row">
+                <img src="./bg.png" data-layzr="http://blog.fens.me/wp-content/uploads/2015/03/child_process.png">
+            </div>
+            <div class="row">
+                <img src="./bg.png" data-layzr="http://blog.fens.me/wp-content/uploads/2015/03/crypto.png">
+            </div>
+            <div class="row">
+                <img src="./bg.png" data-layzr="http://blog.fens.me/wp-content/uploads/2014/02/architect.png">
+            </div>
+            <div class="row">
+                <img src="./bg2.png" data-layzr="http://blog.fens.me/wp-content/uploads/2013/08/seo-title.png">
+            </div>
+        </div>
+        <script>
+            var layzr = new Layzr({
+                selector: '[data-layzr]',
+                attr: 'data-layzr',
+                retinaAttr: 'data-layzr-retina',
+                threshold: 10,
+                callback: function () {
+                    console.log(this);
+                    this.classList.add('border');
+                }
+            });
+        </script>
+    </body>
+</html>
